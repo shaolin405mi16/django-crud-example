@@ -1,3 +1,16 @@
+```
+(making sure your current directory is ~/django-crud-example ...)
+$ python3 -m venv env
+$ source env/bin/activate
+$ pip install --upgrade pip
+$ pip install -r requirements.txt
+$ python3 manage.py migrate
+$ python3 manage.py createsuperuser
+$ python3 manage.py runserver
+```
+
+---
+
 ## Book CRUD Application with Django
 
 This is the basic CRUD application with using Django & Bootstrap 4.
