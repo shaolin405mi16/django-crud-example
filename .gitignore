@@ -9,6 +9,9 @@ idea/*
 venv/*
 venv/
 venv
+env/*
+env/
+env
 book/__pycache__/*
 crud/__pycache__/*
 *.pyc
