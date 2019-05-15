@@ -22,7 +22,10 @@ class BookForm(forms.ModelForm):
         self.fields['publisher'].widget.attrs = {
             'class': 'form-control'
         }
+        self.fields['image'].widget.attrs = {
+            'class': 'form-control'
+        }
 
     class Meta:
         model = Book
-        fields = ('name', 'author', 'publisher')
+        fields = ('name', 'author', 'publisher','image')
