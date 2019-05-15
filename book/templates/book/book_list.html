@@ -12,7 +12,7 @@
                 <tr>
                     <th scope="col">Name</th>
                     <th scope="col">Phon_No</th>
-                    <th scope="col">E-mail</th>
+                    <th scope="col">Email</th>
                     <th scope="col">View</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
@@ -23,7 +23,7 @@
                 <tr>
                     <td>{{ book.name }}</td>
                     <td>{{ book.Phon_No }}</td>
-                    <td>{{ book.E-mail }}</td>
+                    <td>{{ book.Email }}</td>
                     <td><a href="{% url "book_view" book.id %}"><button type="button" class="btn btn-outline-primary btn-sm">View</button></a></td>
                     <td><a href="{% url "book_edit" book.id %}"><button type="button" class="btn btn-outline-secondary btn-sm">Edit</button></a></td>
                     <td><a href="{% url "book_delete" book.id %}"><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></a></td>
