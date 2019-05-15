@@ -14,4 +14,12 @@
             </ul>
         </div>
     </div>
+    <div class="row my-4">
+        <div class="col text-center">
+            <a href="{% url "book_edit" book.id %}"><button type="button" class="btn btn-outline-secondary btn-sm">Edit</button></a>
+        </div>
+        <div class="col text-center">
+            <a href="{% url "book_delete" book.id %}"><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></a>
+        </div>
+    </div>
 {% endblock %}
