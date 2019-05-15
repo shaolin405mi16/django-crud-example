@@ -16,7 +16,7 @@ class Book(models.Model):
 
     # Inspect Book object via name
     def __str__(self):
-        return self.name
+        return self.title
 
     # Inspect absolute Book object's URL
     def get_absolute_url(self):
