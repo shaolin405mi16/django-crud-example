@@ -14,9 +14,9 @@ class Book(models.Model):
     # It's always fine knowing when it is created
     created_at = models.DateTimeField(auto_now_add=True)
 
-    # Inspect Book object via name
+    # Inspect Book object via date
     def __str__(self):
-        return self.name
+        return self.date
 
     # Inspect absolute Book object's URL
     def get_absolute_url(self):
