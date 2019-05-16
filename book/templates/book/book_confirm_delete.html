@@ -1,18 +1,18 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-    <h1 class="my-4" color="white">Delete -
+    <h1 class="my-4" >Delete -
         <small>{{ object }}</small>
     </h1>
     <div class="row" "bg-success text-white">
-        <div class="col-12" "bg-info text-white">
+        <div class="col-11">
             <form method="post">
                 {% csrf_token %}
                 <div class="alert alert-warning" "bg-info text-white" role="alert">
                   Are you sure to delete {{ object }} ?
                 </div>
-                <input type="submit" class="btn btn-info" "bg-warning text-white" value="Yes, delete it" />
-                <a class="btn btn-success" "bg-warning text-white" href="{% url 'book_list' %}">No, just I've tried the delete button</a>
+                <input type="submit" class="btn btn-info" "bg-secondary text-white" value="Yes, delete it" />
+                <a class="btn btn-success" "bg-info text-white" href="{% url 'book_list' %}">No, just I've tried the delete button</a>
             </form>
         </div>
     </div>
