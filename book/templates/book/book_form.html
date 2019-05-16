@@ -1,7 +1,7 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-    <h1> class="my-4">{% if request.path == '/new' %} My Story {% else %} Edit - {% endif %}
+    <h1>{% if request.path == '/new' %}{% else %} Edit - {% endif %}
         {% if request.path != '/new' %}<small>{{ book.name }}</small>{% endif %}
 <body>
    <img src="https://kenpro-shop.jp/user_data/packages/default/img/category/material/best/sky_02.jpg" alt="sky picture" title ="sky">
