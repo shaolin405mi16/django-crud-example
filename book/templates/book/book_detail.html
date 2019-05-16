@@ -1,16 +1,21 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-    <h1 class="my-4">Detail -
-        <small>{{ object.name }}</small>
+    <h2 class="my-4"><small>{{ object.name }}</small>
     </h1>
     <div class="row">
         <div class="col-12">
             <ul class="list-group">
-              <li class="list-group-item"><strong>Name:</strong> {{ object.name }}</li>
               <li class="list-group-item"><strong>Author:</strong> {{ object.author }}</li>
               <li class="list-group-item"><strong>Publisher:</strong> {{ object.publisher }}</li>
               <li class="list-group-item"><strong>Comment:</strong> {{ object.comment }}</li>
+              {% if object.isbn10 %}
+	      <li class="list-group-item text-center">
+		      <strong>Shop at Amazon.co.jp</strong>
+		      <br>
+		      <a target="_blank"  href="https://www.amazon.co.jp/gp/product/{{object.isbn10}}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN={{object.isbn10}}&linkCode=as2&tag=mercuryrecord-22&linkId=298d6d5531c94af6166ef60bc971eab7"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN={{object.isbn10}}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL250_&tag=mercuryrecord-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=mercuryrecord-22&l=am2&o=9&a=4480020470" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+	      </li>
+	      {% endif %}
             </ul>
         </div>
     </div>

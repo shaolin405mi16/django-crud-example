@@ -25,7 +25,10 @@ class BookForm(forms.ModelForm):
         self.fields['comment'].widget.attrs = {
             'class': 'form-control'
         }
+        self.fields['isbn10'].widget.attrs = {
+            'class': 'form-control'
+        }
 
     class Meta:
         model = Book
-        fields = ('name', 'author', 'publisher', 'comment')
+        fields = ('name', 'author', 'publisher', 'comment', 'isbn10')

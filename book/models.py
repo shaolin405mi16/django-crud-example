@@ -11,6 +11,7 @@ class Book(models.Model):
     author = models.CharField(max_length=200)
     publisher = models.CharField(max_length=200)
     comment = models.CharField(max_length=2000, default="")
+    isbn10 = models.CharField(max_length=10, default="")
 
     # It's always fine knowing when it is created
     created_at = models.DateTimeField(auto_now_add=True)
