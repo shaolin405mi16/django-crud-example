@@ -16,13 +16,13 @@ class BookForm(forms.ModelForm):
         self.fields['name'].widget.attrs = {
             'class': 'form-control input-lg'
         }
-        self.fields['major'].widget.attrs = {
+        self.fields['Author'].widget.attrs = {
             'class': 'form-control'
         }
-        self.fields['report'].widget.attrs = {
+        self.fields['Publisher'].widget.attrs = {
             'class': 'form-control'
         }
 
     class Meta:
         model = Book
-        fields = ('name', 'major', 'report')
+        fields = ('name', 'Author', 'Publisher')
