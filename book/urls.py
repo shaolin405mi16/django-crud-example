@@ -9,6 +9,6 @@ urlpatterns = [
     path('view/<int:pk>', views.BookView.as_view(), name='book_view'),
     path('edit/<int:pk>', views.BookUpdate.as_view(), name='book_edit'),
     path('delete/<int:pk>', views.BookDelete.as_view(), name='book_delete'),
-    path('karaake/<int:pk>',views.karaake.as_view(), name = 'karaake')
+    
 	
 ]
