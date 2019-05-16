@@ -8,8 +8,9 @@ from django.urls import reverse
 
 class Book(models.Model):
     name = models.CharField(max_length=200)
-    author = models.CharField(max_length=200)
-    publisher = models.CharField(max_length=200)
+    phoneNu = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    comment = models.CharField(max_length=800)
     
 
     # It's always fine knowing when it is created
