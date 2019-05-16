@@ -1,5 +1,7 @@
 {% extends 'book/base.html' %}
 
+{% load static %}
+
 {% block content %}
     <h1 class="my-4">Home -
         <small>Diary List</small>
@@ -45,5 +47,8 @@
         </div>
     </div>
     {% endif %}
+    </div>
+    <div>
+        <img class="img-fluid" src="{% static 'img/S__182370307.jpg' %}" alt="group picture" title="our picture">
     </div>
 {% endblock %}
