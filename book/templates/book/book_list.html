@@ -10,8 +10,8 @@
               <thead class="thead-dark">
                 <tr>
                     <th scope="col">date</th>
-                    <th scope="col">title</th>
                     <th scope="col">contents</th>
+                    <th scope="col">others</th>
                     <th scope="col">View</th>
                     <th scope="col">Edit</th>
                     <th scope="col">Delete</th>
@@ -20,9 +20,9 @@
               <tbody>
                 {% for book in object_list %}
                 <tr>
-                    <td>{{ book.name }}</td>
-                    <td>{{ book.author }}</td>
-                    <td>{{ book.publisher }}</td>
+                    <td>{{ book.date }}</td>
+                    <td>{{ book.contents }}</td>
+                    <td>{{ book.others }}</td>
                     <td><a href="{% url "book_view" book.id %}"><button type="button" class="btn btn-outline-primary btn-sm">View</button></a></td>
                     <td><a href="{% url "book_edit" book.id %}"><button type="button" class="btn btn-outline-secondary btn-sm">Edit</button></a></td>
                     <td><a href="{% url "book_delete" book.id %}"><button type="button" class="btn btn-outline-danger btn-sm">Delete</button></a></td>
@@ -34,7 +34,7 @@
     {% else %}
     <div class="col-12">
         <div class="alert alert-warning" role="alert">
-            There is no Sdtory, yet. But if you want, you can add from <a class="badge badge-info" href="{% url "book_new" %}"><strong>here.</strong></a>
+            Hi, Something happended today? <a class="badge badge-info" href="{% url "book_new" %}"><strong>write.</strong></a>
         </div>
     </div>
     {% endif %}
