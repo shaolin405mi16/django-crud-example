@@ -1,11 +1,11 @@
 {% extends 'book/base.html' %}
 
 {% block content %}
-<<<<<<< HEAD
-    <h1 class="my-4"style="font-family: 'Caveat', cursive;">{% if request.path == '/new' %} My Story {% else %} Edit - {% endif %}
-=======
-    <h1>{% if request.path == '/new' %}My Story{% else %} Edit - {% endif %}
->>>>>>> 6ffa3acaaa7a78475f620dd5d995e078bf3e129c
+
+    <h1 class="my-4"style="font-family: 'Caveat', cursive;">{% if request.path == '/new' %}Mystory{% else %} Edit - {% endif %}
+
+    <h1>{% if request.path == '/new' %}{% else %} Edit - {% endif %}
+
         {% if request.path != '/new' %}<small>{{ book.name }}</small>{% endif %}
 <body>
    <img src="https://kenpro-shop.jp/user_data/packages/default/img/category/material/best/sky_02.jpg" alt="sky picture" title ="sky" width= "1000" height="200">
