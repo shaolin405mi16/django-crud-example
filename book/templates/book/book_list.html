@@ -10,17 +10,19 @@
             <table class="table">
               <thead class="thead-dark">
                 <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Author</th>
-                    <th scope="col">Publisher</th>
+                    <th scope="col">&nbsp;</th>
+                    <th scope="col">Title &amp; Author</th>
                 </tr>
               </thead>
               <tbody>
                 {% for book in object_list %}
                 <tr>
-			<td><a href="{% url "book_view" book.id %}">{{ book.name }}</a></td>
-                    <td>{{ book.author }}</td>
-                    <td>{{ book.publisher }}</td>
+                    <td class="align-middle">
+                        <a target="_blank"  href="https://www.amazon.co.jp/gp/product/{{book.isbn10}}/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B01HNJIJY4&linkCode=as2&tag=mercuryrecord-22&linkId=8fb9142cda4ba1db3aac0ef63a5b823f"><img border="0" src="//ws-fe.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=JP&ASIN={{book.isbn10}}&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL110_&tag=mercuryrecord-22" ></a><img src="//ir-jp.amazon-adsystem.com/e/ir?t=mercuryrecord-22&l=am2&o=9&a=B01HNJIJY4" width="1" height="1" border="0" alt="" style="align: left; border:none !important; margin:0px !important;" />
+		    </td>
+		    <td class="align-middle">
+                        <a href="{% url "book_view" book.id %}">{{ book.name }}</a><br>by {{ book.author }}
+                    </td>
                 </tr>
                 {% endfor %}
               </tbody>
