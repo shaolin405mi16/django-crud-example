@@ -25,9 +25,9 @@
                     <td>{{ book.created_at }}</td>
                     <td>{{ book.text }}</td>
                     <td>{{ book.image }}</td>
-                    <td><a href="{% url "book_view" book.id %}"><button type="button" class="btn btn-outline-primary btn-sm">View</button></a></td>
-                    <td><a href="{% url "book_edit" book.id %}"><button type="button" class="btn btn-outline-secondary btn-sm">Edit</button></a></td>
-                    <td><a href="{% url "book_delete" book.id %}"><button type="button" class="btn btn-danger">Delete</button></a></td>
+                    <td><a href="{% url "book_view" book.id %}"><button type="button" class="btn btn-danger">View</button></a></td>
+                    <td><a href="{% url "book_edit" book.id %}"><button type="button" class="btn btn-warning">Edit</button></a></td>
+                    <td><a href="{% url "book_delete" book.id %}"><button type="button" class="btn btn-success">Delete</button></a></td>
                 </tr>
                 {% endfor %}
               </tbody>
