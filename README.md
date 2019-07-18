@@ -1,3 +1,5 @@
+foo bar
+
 ```
 (making sure your current directory is ~/django-crud-example ...)
 $ python3 -m venv env
